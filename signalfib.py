@@ -11,6 +11,8 @@ def signal_handler(signum, frame):
     if signum == signal.SIGTERM:
         print(f'Numbers generated: {counter}')
         sys.exit(1)
+    elif signum == signal.SIGINT:
+        print(f'Numbers generated: {counter}')
     else:
         print('Ignoring signal...')
 
